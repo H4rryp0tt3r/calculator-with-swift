@@ -1,25 +1,20 @@
-//
-//  ViewController.swift
-//  Calculator
-//
-//  Created by H4rryp0tt3r on 9/11/16.
-//  Copyright © 2016 ThoughtWorks, Inc. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var display: UILabel!
+
+    @IBAction func touchDigit(sender: UIButton) {
+        let digit = sender.currentTitle!
+        print("Digit Pressed: \(digit)")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-
 }
-
