@@ -2,8 +2,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var display: UILabel!
+    @IBOutlet weak private var display: UILabel!
     private var userInTheMiddleOfTyping = false
+
+    private var calculatorBrain = CalculatorBrain()
 
     private var displayValue: Double {
         get {
@@ -14,7 +16,7 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBAction func touchDigit(sender: UIButton) {
+    @IBAction private func touchDigit(sender: UIButton) {
         let digit = sender.currentTitle!
 
         if userInTheMiddleOfTyping {
@@ -27,23 +29,12 @@ class ViewController: UIViewController {
         userInTheMiddleOfTyping = true
     }
 
-    @IBAction func performOperation(sender: UIButton) {
+    @IBAction private func performOperation(sender: UIButton) {
         userInTheMiddleOfTyping = false
         if let mathSymbol = sender.currentTitle {
-            if mathSymbol == "π" {
-                displayValue = M_PI
-            } else if mathSymbol == "√" {
-                displayValue = sqrt(displayValue)
-            }
+            calculatorBrain.setOperand(displayValue)
+            calculatorBrain.performOperation(mathSymbol)
         }
+        displayValue = calculatorBrain.result
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
 }

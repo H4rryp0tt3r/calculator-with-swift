@@ -12,6 +12,7 @@
 		151995281D8542C90030A60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 151995261D8542C90030A60A /* Main.storyboard */; };
 		1519952A1D8542C90030A60A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 151995291D8542C90030A60A /* Assets.xcassets */; };
 		1519952D1D8542C90030A60A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1519952B1D8542C90030A60A /* LaunchScreen.storyboard */; };
+		151995371D8579360030A60A /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151995361D8579360030A60A /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		151995291D8542C90030A60A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1519952C1D8542C90030A60A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1519952E1D8542C90030A60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		151995361D8579360030A60A /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				151995291D8542C90030A60A /* Assets.xcassets */,
 				1519952B1D8542C90030A60A /* LaunchScreen.storyboard */,
 				1519952E1D8542C90030A60A /* Info.plist */,
+				151995361D8579360030A60A /* CalculatorBrain.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				151995371D8579360030A60A /* CalculatorBrain.swift in Sources */,
 				151995251D8542C90030A60A /* ViewController.swift in Sources */,
 				151995231D8542C90030A60A /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +290,7 @@
 				151995331D8542C90030A60A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
