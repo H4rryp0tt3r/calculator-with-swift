@@ -5,6 +5,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
     private var userInTheMiddleOfTyping = false
 
+    private var displayValue: Double {
+        get {
+            return Double(display.text!)!
+        }
+        set {
+            display.text = String(newValue)
+        }
+    }
+
     @IBAction func touchDigit(sender: UIButton) {
         let digit = sender.currentTitle!
 
@@ -19,9 +28,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func performOperation(sender: UIButton) {
+        userInTheMiddleOfTyping = false
         if let mathSymbol = sender.currentTitle {
             if mathSymbol == "π" {
-                display.text = String(M_PI)
+                displayValue = M_PI
+            } else if mathSymbol == "√" {
+                displayValue = sqrt(displayValue)
             }
         }
     }
